@@ -6,7 +6,6 @@ import DataTable from './Components/DataTable/DataTable';
 
 function App() {
     const [adminData, setAdminData] = useState([]);
-    console.log('adminData:', adminData);
 
     const fetchData = () => {
         axios
