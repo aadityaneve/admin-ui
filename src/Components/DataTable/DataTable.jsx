@@ -83,7 +83,18 @@ export default function DataTable({ adminData, setAdminData }) {
             let obj = { ...selectedIds };
             obj[id] = 1;
             setSelectedIds(obj);
+        } else {
+            let obj = { ...selectedIds };
+            let newObj = {};
+            for (let x in obj) {
+                if (x != id) {
+                    newObj[x] = 1;
+                }
+            }
+            // console.log(obj[id]);
+            setSelectedIds(newObj);
         }
+        console.log('selectedIds:', selectedIds);
     };
 
     const handleDelete = () => {
